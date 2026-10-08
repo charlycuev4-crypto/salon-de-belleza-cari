@@ -9,7 +9,6 @@
             --bg-primary: #ffffff;
             --bg-secondary: #fbf9f6;
             --color-acento: #c59b27;
-            --color-acento-dark: #a47e1d;
             --texto-principal: #1a1a1a;
             --texto-secundario: #666666;
             --borde-suave: #eae3d2;
@@ -28,7 +27,6 @@
             line-height: 1.7;
         }
 
-        /* Barra superior minimalista */
         .top-bar {
             background-color: #1a1a1a;
             color: #ffffff;
@@ -39,11 +37,9 @@
             text-transform: uppercase;
         }
 
-        /* Hero / Presentación Principal tipo Clínica Estética */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23fbf9f6" width="100" height="100"/></svg>');
             background-color: var(--bg-secondary);
-            padding: 5rem 1rem;
+            padding: 3rem 1rem;
             text-align: center;
             border-bottom: 1px solid var(--borde-suave);
         }
@@ -54,9 +50,9 @@
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             color: var(--texto-principal);
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             font-weight: 400;
             letter-spacing: 2px;
         }
@@ -69,14 +65,45 @@
         .hero p {
             font-size: 1.1rem;
             color: var(--texto-secundario);
-            margin-bottom: 2rem;
             font-weight: 300;
+        }
+
+        /* Carrusel Automático de Imágenes */
+        .carrusel-container {
+            max-width: 900px;
+            margin: 2.5rem auto 0;
+            position: relative;
+            height: 380px;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid var(--borde-suave);
+        }
+
+        .carrusel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carrusel-slide.active {
+            opacity: 1;
+        }
+
+        .carrusel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 4rem 1.5rem;
+            padding: 3.5rem 1.5rem;
         }
 
         .seccion-header {
@@ -106,7 +133,6 @@
             margin: 1rem auto 0;
         }
 
-        /* Grid de Categorías Estilo Premium */
         .categorias-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -117,7 +143,7 @@
         .categoria-card {
             background: var(--bg-primary);
             border: 1px solid var(--borde-suave);
-            border-radius: 4px;
+            border-radius: 6px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
@@ -131,21 +157,14 @@
             border-color: var(--color-acento);
         }
 
-        .categoria-img-placeholder {
+        .categoria-img {
             width: 100%;
-            height: 220px;
-            background-color: #f2ece1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--texto-secundario);
-            font-weight: 500;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
+            height: 240px;
+            object-fit: cover;
         }
 
         .categoria-body {
-            padding: 2.5rem 2rem;
+            padding: 2rem;
             text-align: center;
             flex-grow: 1;
             display: flex;
@@ -154,17 +173,17 @@
         }
 
         .categoria-body h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 500;
             color: var(--texto-principal);
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             letter-spacing: 0.5px;
         }
 
         .categoria-body p {
             color: var(--texto-secundario);
             font-size: 0.95rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
             font-weight: 300;
         }
 
@@ -180,6 +199,7 @@
             font-weight: 500;
             transition: all 0.3s ease;
             background: transparent;
+            border-radius: 2px;
         }
 
         .btn-outline:hover {
@@ -187,13 +207,12 @@
             color: #ffffff;
         }
 
-        /* Sección de Capacitaciones / Cursos */
         .cursos-banner {
             background-color: var(--bg-secondary);
             border: 1px solid var(--borde-suave);
             padding: 3.5rem 2rem;
             text-align: center;
-            border-radius: 4px;
+            border-radius: 6px;
             margin-top: 2rem;
         }
 
@@ -250,6 +269,22 @@
         <div class="hero-content">
             <h1>Centro de Estética <span>Cari</span></h1>
             <p>Tratamientos personalizados y diseño de imagen con altos estándares de calidad y atención exclusiva.</p>
+            
+            <!-- Carrusel Automático con las fotos de los trabajos -->
+            <div class="carrusel-container">
+                <div class="carrusel-slide active">
+                    <img src="https://ibb.co/pBRC5MMt" alt="Trabajo Centro Cari 1">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="https://ibb.co/m5vZyKR5" alt="Trabajo Centro Cari 2">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="https://ibb.co/C5M987hg" alt="Trabajo Centro Cari 3">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="https://ibb.co/JwfS5BnV" alt="Trabajo Centro Cari 4">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -260,11 +295,9 @@
         </div>
 
         <div class="categorias-grid">
-            <!-- Tarjeta 1: Estética, Color y Barbería -->
+            <!-- Tarjeta 1 -->
             <div class="categoria-card">
-                <div class="categoria-img-placeholder">
-                    [ Imagen en formato WebP ]
-                </div>
+                <img src="https://ibb.co/JwfS5BnV" alt="Estética, Color y Barbería" class="categoria-img">
                 <div class="categoria-body">
                     <div>
                         <h3>Estética, Color & Barbería</h3>
@@ -276,11 +309,9 @@
                 </div>
             </div>
 
-            <!-- Tarjeta 2: Estilismo de Uñas -->
+            <!-- Tarjeta 2 -->
             <div class="categoria-card">
-                <div class="categoria-img-placeholder">
-                    [ Imagen en formato WebP ]
-                </div>
+                <img src="https://ibb.co/pBRC5MMt" alt="Estilismo de Uñas" class="categoria-img">
                 <div class="categoria-body">
                     <div>
                         <h3>Estilismo de Uñas</h3>
@@ -304,6 +335,21 @@
     <footer>
         <p>&copy; 2026 Centro de Estética Profesional Cari. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script para automatizar el movimiento del carrusel -->
+    <script>
+        const slides = document.querySelectorAll('.carrusel-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Cambia de foto automáticamente cada 3.5 segundos
+        setInterval(nextSlide, 3500);
+    </script>
 
 </body>
 </html>
