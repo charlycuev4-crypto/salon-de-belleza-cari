@@ -32,21 +32,21 @@
             background: linear-gradient(135deg, #ffffff, #f2efe9);
             color: var(--color-texto-oscuro);
             text-align: center;
-            padding: 3.5rem 1rem;
+            padding: 4rem 1rem;
             border-bottom: 2px solid var(--color-acento);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
             position: relative;
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             color: var(--color-acento);
             margin-bottom: 0.5rem;
             letter-spacing: 1.5px;
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--color-texto-suave);
             font-weight: 300;
         }
@@ -54,14 +54,14 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 2.5rem 1rem;
+            padding: 3rem 1rem;
         }
 
         .seccion-titulo {
             text-align: center;
             margin-bottom: 2.5rem;
             color: var(--color-texto-oscuro);
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             letter-spacing: 1px;
         }
 
@@ -76,14 +76,14 @@
 
         .servicios-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.8rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3.5rem;
         }
 
         .servicio-card {
             background: var(--color-card);
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             border-radius: 12px;
             text-align: center;
             transition: all 0.3s ease;
@@ -111,77 +111,78 @@
         }
 
         .servicio-card span {
-            font-size: 2.5rem;
+            font-size: 3rem;
             display: block;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
         }
 
         .servicio-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--color-acento);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .servicio-card p {
             color: var(--color-texto-suave);
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
+            font-size: 0.98rem;
+            margin-bottom: 1.5rem;
         }
 
         .btn-ver-mas {
             display: inline-block;
             background-color: var(--color-acento);
             color: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 20px;
+            padding: 0.7rem 1.8rem;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
-            transition: opacity 0.3s;
+            font-size: 0.95rem;
+            transition: opacity 0.3s, transform 0.2s;
         }
 
         .btn-ver-mas:hover {
-            opacity: 0.85;
+            opacity: 0.9;
+            transform: scale(1.03);
         }
 
         .curso-box {
             background: linear-gradient(135deg, #ffffff, #fdfbf7);
             color: var(--color-texto-oscuro);
-            padding: 2.5rem 1.5rem;
+            padding: 3rem 2rem;
             border-radius: 15px;
             text-align: center;
-            margin-bottom: 3rem;
             border: 1px solid var(--color-acento);
             box-shadow: 0 6px 20px rgba(197, 155, 39, 0.08);
         }
 
         .curso-box h3 {
             color: var(--color-acento);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
         }
 
         .curso-box p {
             color: var(--color-texto-suave);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
         }
 
         .btn-whatsapp {
             display: inline-block;
             background: linear-gradient(135deg, #25d366, #1ebe5d);
             color: white;
-            padding: 0.9rem 2.2rem;
+            padding: 0.9rem 2.4rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
             transition: all 0.3s ease;
-            margin-top: 0.5rem;
         }
 
         .btn-whatsapp:hover {
             transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
         }
 
         footer {
@@ -191,6 +192,7 @@
             padding: 2rem;
             font-size: 0.9rem;
             border-top: 1px solid var(--color-borde);
+            margin-top: 3rem;
         }
     </style>
 </head>
@@ -205,7 +207,7 @@
         <h2 class="seccion-titulo">Nuestras Áreas de Atención</h2>
         
         <div class="servicios-grid">
-            <!-- Tarjeta Estética y Barbería -->
+            <!-- Tarjeta Estética y Barbería -> Abre estetica.html -->
             <div class="servicio-card">
                 <span>💇‍♀️✂️</span>
                 <h3>Estética, Color & Barbería</h3>
@@ -213,7 +215,7 @@
                 <a href="estetica.html" class="btn-ver-mas">Ver Trabajos y Reseñas</a>
             </div>
 
-            <!-- Tarjeta Uñas -->
+            <!-- Tarjeta Uñas -> Abre unas.html -->
             <div class="servicio-card">
                 <span>💅✨</span>
                 <h3>Estilismo de Uñas</h3>
@@ -225,8 +227,8 @@
         <!-- Capacitaciones -->
         <div class="curso-box">
             <h3>🎓 Capacitaciones Profesionales de Uñas</h3>
-            <p>Sumate a nuestro <strong>Curso de Trabajo de Estética de Uñas</strong>. Aprendé desde cero con salida laboral asegurada.</p>
-            <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            <p>Sumate a nuestro <strong>Curso de Trabajo de Estética de Uñas</strong>. Aprendé desde cero con salida laboral asegurada y técnicas profesionales.</p>
+            <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp (Uñas y Cursos)</a>
         </div>
     </div>
 
