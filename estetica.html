@@ -89,14 +89,15 @@
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            background: #000000;
-            aspect-ratio: 4 / 5; /* Evita que las imágenes se estiren o distorsionen */
+            background: #1a1a1a;
+            height: 450px; /* Altura fija para mantener consistencia y evitar estiramientos */
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Ajusta la imagen recortando los excedentes de forma armónica */
+            object-position: center;
             display: block;
             transition: transform 0.4s ease;
         }
@@ -172,6 +173,9 @@
             header h1 {
                 font-size: 2rem;
             }
+            .gallery-item {
+                height: 380px; /* Altura adaptada para pantallas de celulares */
+            }
         }
     </style>
 </head>
@@ -192,13 +196,13 @@
         <!-- Galería de Trabajos -->
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://i.ibb.co/LXHftgJd/LXHftgJd.jpg" alt="Trabajo de Colorimetría 1">
+                <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Trabajo de Colorimetría 1">
             </div>
             <div class="gallery-item">
-                <img src="https://i.ibb.co/ymBMRPt3/ymBMRPt3.jpg" alt="Trabajo de Colorimetría 2">
+                <img src="https://i.ibb.co/m5vZyKR5/m5vZyKR5.jpg" alt="Trabajo de Colorimetría 2">
             </div>
             <div class="gallery-item">
-                <img src="https://i.ibb.co/ns0ZT7dW/ns0ZT7dW.jpg" alt="Trabajo de Colorimetría 3">
+                <img src="https://i.ibb.co/wrdNYFCw/wrdNYFCw.jpg" alt="Trabajo de Colorimetría 3">
             </div>
         </div>
 
