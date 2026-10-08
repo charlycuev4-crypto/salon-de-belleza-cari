@@ -31,23 +31,57 @@
             background-color: #1a1a1a;
             color: #ffffff;
             text-align: center;
-            padding: 0.6rem;
-            font-size: 0.8rem;
-            letter-spacing: 1.5px;
+            padding: 0.5rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        /* Carrusel Principal estilo Aquamed */
-        .hero-slider {
-            position: relative;
-            width: 100%;
-            height: 85vh;
-            max-height: 650px;
-            overflow: hidden;
-            background-color: #1a1a1a;
+        .hero {
+            background-color: var(--bg-secondary);
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--borde-suave);
         }
 
-        .hero-slide {
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            color: var(--texto-principal);
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: var(--color-acento);
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--texto-secundario);
+            font-weight: 300;
+        }
+
+        /* Carrusel Automático de Imágenes */
+        .carrusel-container {
+            max-width: 500px;
+            margin: 2.5rem auto 0;
+            position: relative;
+            height: 380px;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid var(--borde-suave);
+            background-color: #fff;
+        }
+
+        .carrusel-slide {
             position: absolute;
             top: 0;
             left: 0;
@@ -55,87 +89,22 @@
             height: 100%;
             opacity: 0;
             transition: opacity 1s ease-in-out;
-            display: flex;
-            align-items: flex-end;
-            padding: 4rem 2rem;
         }
 
-        .hero-slide.active {
+        .carrusel-slide.active {
             opacity: 1;
         }
 
-        .hero-slide img {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .carrusel-slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            filter: brightness(0.7);
-        }
-
-        .hero-slide::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            z-index: 2;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            max-width: 900px;
-            margin: 0 auto;
-            width: 100%;
-            color: #ffffff;
-            text-align: left;
-        }
-
-        .hero-tag {
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #d4af37;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 1.5px;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .btn-ver-mas {
-            display: inline-block;
-            padding: 0.8rem 2.2rem;
-            border: 1.5px solid #ffffff;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            background: rgba(0,0,0,0.2);
-        }
-
-        .btn-ver-mas:hover {
-            background-color: #ffffff;
-            color: #1a1a1a;
+            object-fit: contain;
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 4rem 1.5rem;
+            padding: 3.5rem 1.5rem;
         }
 
         .seccion-header {
@@ -191,7 +160,7 @@
 
         .categoria-img {
             width: 100%;
-            height: 260px;
+            height: 240px;
             object-fit: cover;
         }
 
@@ -239,47 +208,26 @@
             color: #ffffff;
         }
 
-        /* Banner de Capacitaciones */
         .cursos-banner {
-            position: relative;
-            background-color: #1a1a1a;
-            border-radius: 6px;
-            overflow: hidden;
-            margin-top: 2rem;
-            padding: 4rem 2rem;
-            text-align: center;
-            color: #ffffff;
+            background-color: var(--bg-secondary);
             border: 1px solid var(--borde-suave);
-        }
-
-        .cursos-banner img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            filter: brightness(0.4);
-        }
-
-        .cursos-banner-content {
-            position: relative;
-            z-index: 2;
-            max-width: 650px;
-            margin: 0 auto;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 2rem;
         }
 
         .cursos-banner h3 {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 400;
             margin-bottom: 1rem;
             letter-spacing: 1px;
         }
 
         .cursos-banner p {
-            color: #e0e0e0;
-            margin-bottom: 2rem;
+            color: var(--texto-secundario);
+            max-width: 650px;
+            margin: 0 auto 2rem;
             font-weight: 300;
         }
 
@@ -310,15 +258,6 @@
             letter-spacing: 1px;
             margin-top: 4rem;
         }
-
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-            .hero-slider {
-                height: 75vh;
-            }
-        }
     </style>
 </head>
 <body>
@@ -327,25 +266,25 @@
         Excelencia y Vanguardia en Estética Profesional
     </div>
 
-    <!-- Carrusel Principal -->
-    <section class="hero-slider">
-        <!-- Slide 1: Uñas (Usando el enlace intercambiado JwFS5BnV para asegurarnos de que sea el otro trabajo) -->
-        <div class="hero-slide active">
-            <img src="https://i.ibb.co/JwFS5BnV/imagen.jpg" alt="Estilismo de Uñas">
-            <div class="hero-content">
-                <div class="hero-tag">#TENDENCIAENNAILS</div>
-                <h1>Estilismo de Uñas y Nail Art</h1>
-                <a href="unas.html" class="btn-ver-mas">Ver Más</a>
-            </div>
-        </div>
-
-        <!-- Slide 2: Estética y Color / Cabello (Usando pBRC5MMt) -->
-        <div class="hero-slide">
-            <img src="https://i.ibb.co/pBRC5MMt/imagen.jpg" alt="Estética y Color">
-            <div class="hero-content">
-                <div class="hero-tag">#ESTÉTICACAPILAR</div>
-                <h1>Colorimetría y Estilismo Avanzado</h1>
-                <a href="estetica.html" class="btn-ver-mas">Ver Más</a>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Centro de Estética <span>Cari</span></h1>
+            <p>Tratamientos personalizados y diseño de imagen con altos estándares de calidad y atención exclusiva.</p>
+            
+            <!-- Carrusel Automático con enlaces directos corregidos -->
+            <div class="carrusel-container">
+                <div class="carrusel-slide active">
+                    <img src="https://i.ibb.co/pBRC5MMt/pBRC5MMt.jpg" alt="Trabajo Centro Cari 1">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="https://i.ibb.co/m5vZyKR5/m5vZyKR5.jpg" alt="Trabajo Centro Cari 2">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Trabajo Centro Cari 3">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="https://i.ibb.co/JwfS5BnV/JwfS5BnV.jpg" alt="Trabajo Centro Cari 4">
+                </div>
             </div>
         </div>
     </section>
@@ -357,9 +296,9 @@
         </div>
 
         <div class="categorias-grid">
-            <!-- Tarjeta 1: Estética, Color & Barbería -->
+            <!-- Tarjeta 1 -->
             <div class="categoria-card">
-                <img src="https://i.ibb.co/pBRC5MMt/imagen.jpg" alt="Estética, Color y Barbería" class="categoria-img">
+                <img src="https://i.ibb.co/JwfS5BnV/JwfS5BnV.jpg" alt="Estética, Color y Barbería" class="categoria-img">
                 <div class="categoria-body">
                     <div>
                         <h3>Estética, Color & Barbería</h3>
@@ -371,9 +310,9 @@
                 </div>
             </div>
 
-            <!-- Tarjeta 2: Estilismo de Uñas -->
+            <!-- Tarjeta 2 -->
             <div class="categoria-card">
-                <img src="https://i.ibb.co/JwFS5BnV/imagen.jpg" alt="Estilismo de Uñas" class="categoria-img">
+                <img src="https://i.ibb.co/pBRC5MMt/pBRC5MMt.jpg" alt="Estilismo de Uñas" class="categoria-img">
                 <div class="categoria-body">
                     <div>
                         <h3>Estilismo de Uñas</h3>
@@ -386,14 +325,11 @@
             </div>
         </div>
 
-        <!-- Banner de Capacitaciones (Usando C5M987hg) -->
+        <!-- Banner de Capacitaciones -->
         <div class="cursos-banner">
-            <img src="https://i.ibb.co/C5M987hg/imagen.jpg" alt="Capacitaciones Profesionales">
-            <div class="cursos-banner-content">
-                <h3>Capacitaciones Profesionales</h3>
-                <p>Formate con nuestros cursos especializados de estética de uñas. Programas diseñados con salida laboral y asesoramiento personalizado.</p>
-                <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
-            </div>
+            <h3>Capacitaciones Profesionales</h3>
+            <p>Formate con nuestros cursos especializados de estética de uñas. Programas diseñados con salida laboral y asesoramiento personalizado.</p>
+            <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
         </div>
     </div>
 
@@ -401,9 +337,9 @@
         <p>&copy; 2026 Centro de Estética Profesional Cari. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script del Carrusel -->
+    <!-- Script para automatizar el movimiento del carrusel -->
     <script>
-        const slides = document.querySelectorAll('.hero-slide');
+        const slides = document.querySelectorAll('.carrusel-slide');
         let currentSlide = 0;
 
         function nextSlide() {
@@ -412,7 +348,8 @@
             slides[currentSlide].classList.add('active');
         }
 
-        setInterval(nextSlide, 4000);
+        // Cambia de foto automáticamente cada 3.5 segundos
+        setInterval(nextSlide, 3500);
     </script>
 
 </body>
