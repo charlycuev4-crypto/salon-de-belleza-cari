@@ -239,6 +239,37 @@
             color: #ffffff;
         }
 
+        /* Galería exclusiva para Uñas (Links 1 y 3) */
+        .galeria-uñas-section {
+            margin-bottom: 4rem;
+        }
+
+        .galeria-uñas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .galeria-uñas-item {
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid var(--borde-suave);
+            height: 260px;
+            background: #fff;
+        }
+
+        .galeria-uñas-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .galeria-uñas-item img:hover {
+            transform: scale(1.05);
+        }
+
         /* Banner de Capacitaciones */
         .cursos-banner {
             position: relative;
@@ -327,9 +358,9 @@
         Excelencia y Vanguardia en Estética Profesional
     </div>
 
-    <!-- Carrusel Principal Estilo Grande / Sofisticado -->
+    <!-- Carrusel Principal Estilo Sofisticado -->
     <section class="hero-slider">
-        <!-- Slide 1: Estilismo de Uñas (Con la imagen correcta proporcionada) -->
+        <!-- Slide 1: Uñas (Usando la imagen 1 de uñas) -->
         <div class="hero-slide active">
             <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Estilismo de Uñas">
             <div class="hero-content">
@@ -339,7 +370,7 @@
             </div>
         </div>
 
-        <!-- Slide 2: Estética y Color / Cabello -->
+        <!-- Slide 2: Estética y Color -->
         <div class="hero-slide">
             <img src="https://i.ibb.co/m5vZyKR5/m5vZyKR5.jpg" alt="Estética y Color">
             <div class="hero-content">
@@ -371,7 +402,7 @@
                 </div>
             </div>
 
-            <!-- Tarjeta 2: Estilismo de Uñas (Con la imagen correcta de uñas) -->
+            <!-- Tarjeta 2: Estilismo de Uñas (Usando la imagen 1 de uñas) -->
             <div class="categoria-card">
                 <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Estilismo de Uñas" class="categoria-img">
                 <div class="categoria-body">
@@ -386,9 +417,25 @@
             </div>
         </div>
 
+        <!-- Sección de Galería de Uñas con los links 1 y 3 únicamente -->
+        <div class="galeria-uñas-section">
+            <div class="seccion-header" style="margin-bottom: 1.5rem;">
+                <h3 style="font-size: 1.5rem; font-weight: 400; letter-spacing: 1px;">Galería de Estética de Uñas</h3>
+                <p>Nuestros diseños exclusivos de manicura</p>
+            </div>
+            <div class="galeria-uñas-grid">
+                <div class="galeria-uñas-item">
+                    <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Trabajo de Uñas 1">
+                </div>
+                <div class="galeria-uñas-item">
+                    <img src="https://i.ibb.co/JwfS5BnV/JwfS5BnV.jpg" alt="Trabajo de Uñas 3">
+                </div>
+            </div>
+        </div>
+
         <!-- Banner de Capacitaciones -->
         <div class="cursos-banner">
-            <img src="https://i.ibb.co/pBRC5MMt/pBRC5MMt.jpg" alt="Capacitaciones Profesionales">
+            <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Capacitaciones Profesionales">
             <div class="cursos-banner-content">
                 <h3>Capacitaciones Profesionales</h3>
                 <p>Formate con nuestros cursos especializados de estética de uñas. Programas diseñados con salida laboral y asesoramiento personalizado.</p>
