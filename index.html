@@ -37,7 +37,7 @@
             text-transform: uppercase;
         }
 
-        /* Estilo Carrusel Principal tipo Aquamed */
+        /* Carrusel Principal estilo Aquamed */
         .hero-slider {
             position: relative;
             width: 100%;
@@ -72,10 +72,9 @@
             height: 100%;
             object-fit: cover;
             z-index: 1;
-            filter: brightness(0.7); /* Oscurece un poco la imagen para que resalte el texto */
+            filter: brightness(0.7);
         }
 
-        /* Capa oscura surada abajo para legibilidad */
         .hero-slide::after {
             content: '';
             position: absolute;
@@ -240,26 +239,47 @@
             color: #ffffff;
         }
 
+        /* Banner de Capacitaciones con imagen de fondo */
         .cursos-banner {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--borde-suave);
-            padding: 3.5rem 2rem;
-            text-align: center;
+            position: relative;
+            background-color: #1a1a1a;
             border-radius: 6px;
+            overflow: hidden;
             margin-top: 2rem;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: #ffffff;
+            border: 1px solid var(--borde-suave);
+        }
+
+        .cursos-banner img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            filter: brightness(0.4);
+        }
+
+        .cursos-banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            margin: 0 auto;
         }
 
         .cursos-banner h3 {
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             font-weight: 400;
             margin-bottom: 1rem;
             letter-spacing: 1px;
         }
 
         .cursos-banner p {
-            color: var(--texto-secundario);
-            max-width: 650px;
-            margin: 0 auto 2rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
             font-weight: 300;
         }
 
@@ -291,7 +311,6 @@
             margin-top: 4rem;
         }
 
-        /* Responsive para celulares */
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2.2rem;
@@ -308,11 +327,10 @@
         Excelencia y Vanguardia en Estética Profesional
     </div>
 
-    <!-- Carrusel Principal estilo Aquamed -->
+    <!-- Carrusel Principal -->
     <section class="hero-slider">
-        <!-- Slide 1 -->
         <div class="hero-slide active">
-            <img src="https://i.ibb.co/Xfj49nn7/imagen.jpg" alt="Centro de Estética Cari">
+            <img src="https://i.ibb.co/Xfj49nn7/imagen.jpg" alt="Estilismo de Uñas">
             <div class="hero-content">
                 <div class="hero-tag">#TENDENCIAENNAILS</div>
                 <h1>Estilismo de Uñas y Nail Art</h1>
@@ -320,22 +338,11 @@
             </div>
         </div>
 
-        <!-- Slide 2 -->
         <div class="hero-slide">
-            <img src="https://i.ibb.co/PzZbc4mS/imagen.jpg" alt="Estética y Color">
+            <img src="https://i.ibb.co/r2zm0FVs/imagen.jpg" alt="Estética y Color">
             <div class="hero-content">
                 <div class="hero-tag">#ESTÉTICACAPILAR</div>
                 <h1>Colorimetría y Estilismo Avanzado</h1>
-                <a href="estetica.html" class="btn-ver-mas">Ver Más</a>
-            </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="hero-slide">
-            <img src="https://i.ibb.co/r2zm0FVs/imagen.jpg" alt="Diseño y Tratamientos">
-            <div class="hero-content">
-                <div class="hero-tag">#EXCLUSIVIDAD</div>
-                <h1>Tratamientos Personalizados</h1>
                 <a href="estetica.html" class="btn-ver-mas">Ver Más</a>
             </div>
         </div>
@@ -348,7 +355,7 @@
         </div>
 
         <div class="categorias-grid">
-            <!-- Tarjeta 1: Estética, Color & Barbería -->
+            <!-- Tarjeta 1: Estética, Color & Barbería (Imagen correcta de cabello) -->
             <div class="categoria-card">
                 <img src="https://i.ibb.co/r2zm0FVs/imagen.jpg" alt="Estética, Color y Barbería" class="categoria-img">
                 <div class="categoria-body">
@@ -362,7 +369,7 @@
                 </div>
             </div>
 
-            <!-- Tarjeta 2: Estilismo de Uñas -->
+            <!-- Tarjeta 2: Estilismo de Uñas (Imagen correcta de uñas) -->
             <div class="categoria-card">
                 <img src="https://i.ibb.co/Xfj49nn7/imagen.jpg" alt="Estilismo de Uñas" class="categoria-img">
                 <div class="categoria-body">
@@ -377,11 +384,14 @@
             </div>
         </div>
 
-        <!-- Banner de Capacitaciones -->
+        <!-- Banner de Capacitaciones con la nueva imagen de fondo -->
         <div class="cursos-banner">
-            <h3>Capacitaciones Profesionales</h3>
-            <p>Formate con nuestros cursos especializados de estética de uñas. Programas diseñados con salida laboral y asesoramiento personalizado.</p>
-            <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            <img src="https://i.ibb.co/h0btSYm/imagen.jpg" alt="Capacitaciones Profesionales">
+            <div class="cursos-banner-content">
+                <h3>Capacitaciones Profesionales</h3>
+                <p>Formate con nuestros cursos especializados de estética de uñas. Programas diseñados con salida laboral y asesoramiento personalizado.</p>
+                <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
+            </div>
         </div>
     </div>
 
@@ -389,7 +399,7 @@
         <p>&copy; 2026 Centro de Estética Profesional Cari. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script para automatizar el carrusel de pantalla completa -->
+    <!-- Script del Carrusel -->
     <script>
         const slides = document.querySelectorAll('.hero-slide');
         let currentSlide = 0;
@@ -400,7 +410,6 @@
             slides[currentSlide].classList.add('active');
         }
 
-        // Cambia de slide automáticamente cada 4 segundos
         setInterval(nextSlide, 4000);
     </script>
 
