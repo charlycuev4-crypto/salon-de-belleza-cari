@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilismo de Uñas - Salón de Belleza Cari</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #fbf9f6;
+            --color-acento: #c59b27;
+            --texto-principal: #1a1a1a;
+            --texto-secundario: #666666;
+            --borde-suave: #eae3d2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--texto-principal);
+            line-height: 1.7;
+        }
+
+        /* Barra superior con el nombre del salón y WhatsApp */
+        .top-bar-salon {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .top-bar-salon .salon-title {
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #d4af37;
+            text-transform: uppercase;
+        }
+
+        .top-bar-salon .whatsapp-contacto {
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #25d366;
+            padding: 0.4rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.3s;
+        }
+
+        .top-bar-salon .whatsapp-contacto:hover {
+            opacity: 0.9;
+        }
+
+        .header-interna {
+            background-color: var(--bg-secondary);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--borde-suave);
+        }
+
+        .header-interna h1 {
+            font-size: 2.3rem;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.8rem;
+        }
+
+        .header-interna p {
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            margin-top: 1.2rem;
+            padding: 0.5rem 1.2rem;
+            background: transparent;
+            border: 1px solid var(--color-acento);
+            color: var(--texto-principal);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-volver:hover {
+            background-color: var(--color-acento);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Grilla de la Galería */
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid var(--borde-suave);
+            height: 320px;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .galeria-item img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #999999;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .top-bar-salon {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra Superior con Nombre del Salón y WhatsApp -->
+    <div class="top-bar-salon">
+        <span class="salon-title">Salón de Belleza Cari</span>
+        <a href="https://wa.me/5491131511068?text=Hola,%20quiero%20consultar%20sobre%20los%20servicios%20de%20uñas" class="whatsapp-contacto" target="_blank">
+            WhatsApp: 11 3151-1068
+        </a>
+    </div>
+
+    <!-- Cabecera de la sección -->
+    <section class="header-interna">
+        <h1>Estilismo de Uñas y Nail Art</h1>
+        <p>Explora nuestra galería de diseños exclusivos, esmaltados y esculpidas profesionales.</p>
+        <a href="index.html" class="btn-volver">&#10094; Volver al Inicio</a>
+    </section>
+
+    <!-- Contenedor de la Galería -->
+    <div class="container">
+        <div class="galeria-grid">
+            <!-- Trabajo 1 -->
+            <div class="galeria-item">
+                <img src="URL_DE_TU_IMAGEN_1.jpg" alt="Diseño de Uñas 1">
+            </div>
+            <!-- Trabajo 2 -->
+            <div class="galeria-item">
+                <img src="URL_DE_TU_IMAGEN_2.jpg" alt="Diseño de Uñas 2">
+            </div>
+            <!-- Trabajo 3 -->
+            <div class="galeria-item">
+                <img src="URL_DE_TU_IMAGEN_3.jpg" alt="Diseño de Uñas 3">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Salón de Belleza Cari. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
