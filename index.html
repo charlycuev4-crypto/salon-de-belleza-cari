@@ -31,57 +31,23 @@
             background-color: #1a1a1a;
             color: #ffffff;
             text-align: center;
-            padding: 0.5rem;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
+            padding: 0.6rem;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
         }
 
-        .hero {
-            background-color: var(--bg-secondary);
-            padding: 3rem 1rem;
-            text-align: center;
-            border-bottom: 1px solid var(--borde-suave);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 2.6rem;
-            color: var(--texto-principal);
-            margin-bottom: 0.8rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-        }
-
-        .hero h1 span {
-            color: var(--color-acento);
-            font-weight: 600;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: var(--texto-secundario);
-            font-weight: 300;
-        }
-
-        /* Carrusel Automático de Imágenes */
-        .carrusel-container {
-            max-width: 500px;
-            margin: 2.5rem auto 0;
+        /* Estilo Carrusel Principal tipo Aquamed */
+        .hero-slider {
             position: relative;
-            height: 380px;
+            width: 100%;
+            height: 85vh;
+            max-height: 650px;
             overflow: hidden;
-            border-radius: 6px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border: 1px solid var(--borde-suave);
-            background-color: #fff;
+            background-color: #1a1a1a;
         }
 
-        .carrusel-slide {
+        .hero-slide {
             position: absolute;
             top: 0;
             left: 0;
@@ -89,22 +55,88 @@
             height: 100%;
             opacity: 0;
             transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: flex-end;
+            padding: 4rem 2rem;
         }
 
-        .carrusel-slide.active {
+        .hero-slide.active {
             opacity: 1;
         }
 
-        .carrusel-slide img {
+        .hero-slide img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            z-index: 1;
+            filter: brightness(0.7); /* Oscurece un poco la imagen para que resalte el texto */
+        }
+
+        /* Capa oscura surada abajo para legibilidad */
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .hero-tag {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .btn-ver-mas {
+            display: inline-block;
+            padding: 0.8rem 2.2rem;
+            border: 1.5px solid #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .btn-ver-mas:hover {
+            background-color: #ffffff;
+            color: #1a1a1a;
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 3.5rem 1.5rem;
+            padding: 4rem 1.5rem;
         }
 
         .seccion-header {
@@ -160,7 +192,7 @@
 
         .categoria-img {
             width: 100%;
-            height: 240px;
+            height: 260px;
             object-fit: cover;
         }
 
@@ -258,6 +290,16 @@
             letter-spacing: 1px;
             margin-top: 4rem;
         }
+
+        /* Responsive para celulares */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-slider {
+                height: 75vh;
+            }
+        }
     </style>
 </head>
 <body>
@@ -266,22 +308,35 @@
         Excelencia y Vanguardia en Estética Profesional
     </div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Centro de Estética <span>Cari</span></h1>
-            <p>Tratamientos personalizados y diseño de imagen con altos estándares de calidad y atención exclusiva.</p>
-            
-            <!-- Carrusel Automático -->
-            <div class="carrusel-container">
-                <div class="carrusel-slide active">
-                    <img src="https://i.ibb.co/Xfj49nn7/imagen.jpg" alt="Trabajo Centro Cari 1">
-                </div>
-                <div class="carrusel-slide">
-                    <img src="https://i.ibb.co/PzZbc4mS/imagen.jpg" alt="Trabajo Centro Cari 2">
-                </div>
-                <div class="carrusel-slide">
-                    <img src="https://i.ibb.co/r2zm0FVs/imagen.jpg" alt="Trabajo Centro Cari 3">
-                </div>
+    <!-- Carrusel Principal estilo Aquamed -->
+    <section class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <img src="https://i.ibb.co/Xfj49nn7/imagen.jpg" alt="Centro de Estética Cari">
+            <div class="hero-content">
+                <div class="hero-tag">#TENDENCIAENNAILS</div>
+                <h1>Estilismo de Uñas y Nail Art</h1>
+                <a href="unas.html" class="btn-ver-mas">Ver Más</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <img src="https://i.ibb.co/PzZbc4mS/imagen.jpg" alt="Estética y Color">
+            <div class="hero-content">
+                <div class="hero-tag">#ESTÉTICACAPILAR</div>
+                <h1>Colorimetría y Estilismo Avanzado</h1>
+                <a href="estetica.html" class="btn-ver-mas">Ver Más</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+            <img src="https://i.ibb.co/r2zm0FVs/imagen.jpg" alt="Diseño y Tratamientos">
+            <div class="hero-content">
+                <div class="hero-tag">#EXCLUSIVIDAD</div>
+                <h1>Tratamientos Personalizados</h1>
+                <a href="estetica.html" class="btn-ver-mas">Ver Más</a>
             </div>
         </div>
     </section>
@@ -293,7 +348,7 @@
         </div>
 
         <div class="categorias-grid">
-            <!-- Tarjeta 1: Estética, Color & Barbería (Asignado con el link de cabello) -->
+            <!-- Tarjeta 1: Estética, Color & Barbería -->
             <div class="categoria-card">
                 <img src="https://i.ibb.co/r2zm0FVs/imagen.jpg" alt="Estética, Color y Barbería" class="categoria-img">
                 <div class="categoria-body">
@@ -307,7 +362,7 @@
                 </div>
             </div>
 
-            <!-- Tarjeta 2: Estilismo de Uñas (Asignado con el link de uñas) -->
+            <!-- Tarjeta 2: Estilismo de Uñas -->
             <div class="categoria-card">
                 <img src="https://i.ibb.co/Xfj49nn7/imagen.jpg" alt="Estilismo de Uñas" class="categoria-img">
                 <div class="categoria-body">
@@ -334,9 +389,9 @@
         <p>&copy; 2026 Centro de Estética Profesional Cari. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script para automatizar el movimiento del carrusel -->
+    <!-- Script para automatizar el carrusel de pantalla completa -->
     <script>
-        const slides = document.querySelectorAll('.carrusel-slide');
+        const slides = document.querySelectorAll('.hero-slide');
         let currentSlide = 0;
 
         function nextSlide() {
@@ -345,8 +400,8 @@
             slides[currentSlide].classList.add('active');
         }
 
-        // Cambia de foto automáticamente cada 3.5 segundos
-        setInterval(nextSlide, 3500);
+        // Cambia de slide automáticamente cada 4 segundos
+        setInterval(nextSlide, 4000);
     </script>
 
 </body>
