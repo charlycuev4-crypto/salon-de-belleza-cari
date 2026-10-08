@@ -7,10 +7,8 @@
     <style>
         :root {
             --bg-primary: #ffffff;
-            --bg-secondary: #fbf9f6;
             --color-acento: #c59b27;
             --texto-principal: #1a1a1a;
-            --texto-secundario: #666666;
             --borde-suave: #eae3d2;
         }
 
@@ -37,7 +35,7 @@
             text-transform: uppercase;
         }
 
-        /* Carrusel Principal Corregido y Fluido */
+        /* Carrusel Principal */
         .hero-slider {
             position: relative;
             width: 100%;
@@ -131,7 +129,6 @@
             color: #1a1a1a;
         }
 
-        /* Botones de navegación manual opcionales para el carrusel */
         .slider-btn {
             position: absolute;
             top: 50%;
@@ -159,145 +156,12 @@
             padding: 4rem 1.5rem;
         }
 
-        .seccion-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .seccion-header h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            letter-spacing: 1.5px;
-            color: var(--texto-principal);
-            margin-bottom: 0.5rem;
-        }
-
-        .seccion-header p {
-            color: var(--texto-secundario);
-            font-size: 0.95rem;
-        }
-
-        .seccion-header::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 2px;
-            background: var(--color-acento);
-            margin: 1rem auto 0;
-        }
-
-        .categorias-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 4rem;
-        }
-
-        .categoria-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--borde-suave);
-            border-radius: 6px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .categoria-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-            border-color: var(--color-acento);
-        }
-
-        .categoria-img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-        }
-
-        .categoria-body {
-            padding: 2rem;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .categoria-body h3 {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: var(--texto-principal);
-            margin-bottom: 0.8rem;
-            letter-spacing: 0.5px;
-        }
-
-        .categoria-body p {
-            color: var(--texto-secundario);
-            font-size: 0.95rem;
-            margin-bottom: 1.8rem;
-            font-weight: 300;
-        }
-
-        .btn-outline {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            border: 1px solid var(--color-acento);
-            color: var(--texto-principal);
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            background: transparent;
-            border-radius: 2px;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--color-acento);
-            color: #ffffff;
-        }
-
-        /* Galería exclusiva para Uñas */
-        .galeria-uñas-section {
-            margin-bottom: 4rem;
-        }
-
-        .galeria-uñas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .galeria-uñas-item {
-            overflow: hidden;
-            border-radius: 6px;
-            border: 1px solid var(--borde-suave);
-            height: 260px;
-            background: #fff;
-        }
-
-        .galeria-uñas-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .galeria-uñas-item img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Banner de Capacitaciones */
+        /* Banner de Capacitaciones de Uñas */
         .cursos-banner {
             position: relative;
             background-color: #1a1a1a;
             border-radius: 6px;
             overflow: hidden;
-            margin-top: 2rem;
             padding: 4rem 2rem;
             text-align: center;
             color: #ffffff;
@@ -379,7 +243,7 @@
         Excelencia y Vanguardia en Estética Profesional
     </div>
 
-    <!-- Carrusel Principal con Pistas Deslizantes (Track) -->
+    <!-- Carrusel Principal -->
     <section class="hero-slider">
         <div class="hero-track" id="heroTrack">
             <!-- Slide 1: Uñas -->
@@ -388,47 +252,41 @@
                 <div class="hero-content">
                     <div class="hero-tag">#TENDENCIAENNAILS</div>
                     <h1>Estilismo de Uñas y Nail Art</h1>
-                    <a href="unas.html" class="btn-ver-mas">Ver Más</a>
+                    <!-- Aquí colocarás la URL de GitHub Pages de tu repositorio de uñas -->
+                    <a href="https://tu-usuario.github.io/repositorio-unas/" class="btn-ver-mas" target="_blank">Ver Más</a>
                 </div>
             </div>
 
-            <!-- Slide 2: Colorimetría y Estética Capilar -->
+            <!-- Slide 2: Estética y Barbería -->
             <div class="hero-slide">
-                <img src="https://i.ibb.co/m5vZyKR5/m5vZyKR5.jpg" alt="Estética y Color">
+                <img src="https://i.ibb.co/m5vZyKR5/m5vZyKR5.jpg" alt="Estética y Barbería">
                 <div class="hero-content">
-                    <div class="hero-tag">#ESTÉTICACAPILAR</div>
-                    <h1>Colorimetría y Estilismo Avanzado</h1>
-                    <a href="estetica.html" class="btn-ver-mas">Ver Más</a>
+                    <div class="hero-tag">#ESTÉTICAYBARBERÍA</div>
+                    <h1>Estética, Colorimetría y Barbería</h1>
+                    <!-- Aquí colocarás la URL de GitHub Pages de tu repositorio de estética y barbería -->
+                    <a href="https://tu-usuario.github.io/repositorio-estetica-barberia/" class="btn-ver-mas" target="_blank">Ver Más</a>
                 </div>
             </div>
 
-            <!-- Slide 3: Barbería -->
-            <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" alt="Barbería Profesional">
-                <div class="hero-content">
-                    <div class="hero-tag">#BARBERPROFESSIONAL</div>
-                    <h1>Corte, Barbería y Estilo Masculino</h1>
-                    <a href="barberia.html" class="btn-ver-mas">Ver Más</a>
-                </div>
-            </div>
-
-            <!-- Slide 4: Diseño y Depilación de Cejas -->
+            <!-- Slide 3: Diseño de Cejas -->
             <div class="hero-slide">
                 <img src="https://i.ibb.co/wrdNYFCw/wrdNYFCw.jpg" alt="Diseño y Depilación de Cejas">
                 <div class="hero-content">
                     <div class="hero-tag">#MIRADAPERFECTA</div>
                     <h1>Diseño y Depilación de Cejas</h1>
-                    <a href="cejas.html" class="btn-ver-mas">Ver Más</a>
+                    <!-- Aquí colocarás la URL de GitHub Pages de tu repositorio de cejas -->
+                    <a href="https://tu-usuario.github.io/repositorio-cejas/" class="btn-ver-mas" target="_blank">Ver Más</a>
                 </div>
             </div>
 
-            <!-- Slide 5: Colocación de Pestañas con Productos Profesionales -->
+            <!-- Slide 4: Colocación de Pestañas -->
             <div class="hero-slide">
-                <img src="https://i.ibb.co/wFtzhx2t/wFtzhx2t.jpg" alt="Colocación de Pestañas con Productos Profesionales">
+                <img src="https://i.ibb.co/wFtzhx2t/wFtzhx2t.jpg" alt="Colocación de Pestañas">
                 <div class="hero-content">
                     <div class="hero-tag">#LASHESEXPERT</div>
-                    <h1>Colocación y Extensión de Pestañas con Productos Profesionales</h1>
-                    <a href="pestanas.html" class="btn-ver-mas">Ver Más</a>
+                    <h1>Colocación y Extensión de Pestañas</h1>
+                    <!-- Aquí colocarás la URL de GitHub Pages de tu repositorio de pestañas -->
+                    <a href="https://tu-usuario.github.io/repositorio-pestanas/" class="btn-ver-mas" target="_blank">Ver Más</a>
                 </div>
             </div>
         </div>
@@ -439,76 +297,11 @@
     </section>
 
     <div class="container">
-        <div class="seccion-header">
-            <h2>Nuestras Especialidades</h2>
-            <p>Seleccione un área para explorar nuestros servicios y galerías</p>
-        </div>
-
-        <div class="categorias-grid">
-            <!-- Tarjeta 1 -->
-            <div class="categoria-card">
-                <img src="https://i.ibb.co/m5vZyKR5/m5vZyKR5.jpg" alt="Estética, Color y Barbería" class="categoria-img">
-                <div class="categoria-body">
-                    <div>
-                        <h3>Estética, Color & Barbería</h3>
-                        <p>Especialistas en colorimetría avanzada, estilismo capilar, barbería y diseño.</p>
-                    </div>
-                    <div>
-                        <a href="estetica.html" class="btn-outline">Ver Especialidad</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 2 -->
-            <div class="categoria-card">
-                <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Estilismo de Uñas" class="categoria-img">
-                <div class="categoria-body">
-                    <div>
-                        <h3>Estilismo de Uñas</h3>
-                        <p>Manicuría profesional, esculpidos de alta duración y tendencias exclusivas en nail art.</p>
-                    </div>
-                    <div>
-                        <a href="unas.html" class="btn-outline">Ver Especialidad</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 3 -->
-            <div class="categoria-card">
-                <img src="https://i.ibb.co/wrdNYFCw/wrdNYFCw.jpg" alt="Cejas y Pestañas" class="categoria-img">
-                <div class="categoria-body">
-                    <div>
-                        <h3>Cejas & Pestañas</h3>
-                        <p>Diseño, depilación de cejas y colocación de pestañas para realzar tu mirada.</p>
-                    </div>
-                    <div>
-                        <a href="cejas-pestanas.html" class="btn-outline">Ver Especialidad</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Galería de Uñas -->
-        <div class="galeria-uñas-section">
-            <div class="seccion-header" style="margin-bottom: 1.5rem;">
-                <h3 style="font-size: 1.5rem; font-weight: 400; letter-spacing: 1px;">Galería de Estética de Uñas</h3>
-                <p>Nuestros diseños exclusivos de manicura</p>
-            </div>
-            <div class="galeria-uñas-grid">
-                <div class="galeria-uñas-item">
-                    <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Trabajo de Uñas 1">
-                </div>
-                <div class="galeria-uñas-item">
-                    <img src="https://i.ibb.co/JwfS5BnV/JwfS5BnV.jpg" alt="Trabajo de Uñas 3">
-                </div>
-            </div>
-        </div>
-
-        <!-- Banner de Capacitaciones -->
+        <!-- Banner de Capacitaciones de Uñas -->
         <div class="cursos-banner">
             <img src="https://i.ibb.co/C5M987hg/C5M987hg.jpg" alt="Capacitaciones Profesionales">
             <div class="cursos-banner-content">
-                <h3>Capacitaciones Profesionales</h3>
+                <h3>Capacitaciones Profesionales de Uñas</h3>
                 <p>Formate con nuestros cursos especializados de estética de uñas. Programas diseñados con salida laboral y asesoramiento personalizado.</p>
                 <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
             </div>
@@ -519,7 +312,7 @@
         <p>&copy; 2026 Centro de Estética Profesional Cari. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script del Carrusel Funcional -->
+    <!-- Script del Carrusel -->
     <script>
         const track = document.getElementById('heroTrack');
         const slides = Array.from(track.children);
@@ -545,10 +338,8 @@
         nextBtn.addEventListener('click', nextSlide);
         prevBtn.addEventListener('click', prevSlide);
 
-        // Movimiento automático cada 4 segundos
         let slideInterval = setInterval(nextSlide, 4000);
 
-        // Pausar el movimiento automático al pasar el mouse por encima del carrusel
         const sliderContainer = document.querySelector('.hero-slider');
         sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
         sliderContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 4000));
