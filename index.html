@@ -6,12 +6,12 @@
     <title>Centro de Estética Profesional Cari</title>
     <style>
         :root {
-            --color-fondo: #f8f9fa; /* Blanco mate elegante */
-            --color-card: #ffffff;  /* Tarjetas blancas puras */
-            --color-acento: #c59b27; /* Dorado sofisticado */
+            --color-fondo: #f8f9fa;
+            --color-card: #ffffff;
+            --color-acento: #c59b27;
             --color-texto-oscuro: #2d2d2d;
             --color-texto-suave: #666666;
-            --color-borde: #e2d9c5; /* Sutil tono dorado/arena para bordes */
+            --color-borde: #e2d9c5;
         }
 
         * {
@@ -26,10 +26,6 @@
             color: var(--color-texto-oscuro);
             line-height: 1.6;
             overflow-x: hidden;
-            /* Textura sutil y limpia tipo mármol blanco mate con vetas muy tenues */
-            background-image: 
-                radial-gradient(circle at 15% 20%, rgba(197, 155, 39, 0.04) 0%, transparent 45%),
-                radial-gradient(circle at 85% 80%, rgba(197, 155, 39, 0.05) 0%, transparent 45%);
         }
 
         header {
@@ -96,7 +92,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
         }
 
-        /* Línea dorada superior estilo elegante */
         .servicio-card::before {
             content: '';
             position: absolute;
@@ -133,20 +128,20 @@
             margin-bottom: 1.2rem;
         }
 
-        .btn-whatsapp-card {
+        .btn-ver-mas {
             display: inline-block;
-            background-color: #25d366;
+            background-color: var(--color-acento);
             color: white;
-            padding: 0.5rem 1.2rem;
+            padding: 0.6rem 1.5rem;
             border-radius: 20px;
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9rem;
-            transition: background 0.3s;
+            transition: opacity 0.3s;
         }
 
-        .btn-whatsapp-card:hover {
-            background-color: #1ebe5d;
+        .btn-ver-mas:hover {
+            opacity: 0.85;
         }
 
         .curso-box {
@@ -158,7 +153,6 @@
             margin-bottom: 3rem;
             border: 1px solid var(--color-acento);
             box-shadow: 0 6px 20px rgba(197, 155, 39, 0.08);
-            position: relative;
         }
 
         .curso-box h3 {
@@ -188,7 +182,6 @@
 
         .btn-whatsapp:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
         }
 
         footer {
@@ -209,59 +202,31 @@
     </header>
 
     <div class="container">
-        <h2 class="seccion-titulo">Nuestros Servicios</h2>
+        <h2 class="seccion-titulo">Nuestras Áreas de Atención</h2>
         
         <div class="servicios-grid">
-            <!-- Estética y Barbería (Número: 5491131511068) -->
+            <!-- Tarjeta Estética y Barbería -->
             <div class="servicio-card">
-                <span>🎨</span>
-                <h3>Colorimetría</h3>
-                <p>Técnicas avanzadas de color, iluminación y matices personalizados.</p>
-                <a href="https://wa.me/5491131511068?text=Hola%20Cari,%20quiero%20consultar%20sobre%20Colorimetría" class="btn-whatsapp-card" target="_blank">Reservar Turno</a>
+                <span>💇‍♀️✂️</span>
+                <h3>Estética, Color & Barbería</h3>
+                <p>Colorimetría avanzada, cortes, peinados, barbería y diseño de cejas profesional.</p>
+                <a href="estetica.html" class="btn-ver-mas">Ver Trabajos y Reseñas</a>
             </div>
 
+            <!-- Tarjeta Uñas -->
             <div class="servicio-card">
-                <span>💇‍♀️</span>
-                <h3>Corte y Peinados</h3>
-                <p>Tendencias actuales en cortes y estilismos para cada ocasión.</p>
-                <a href="https://wa.me/5491131511068?text=Hola%20Cari,%20quiero%20consultar%20sobre%20Corte%20y%20Peinados" class="btn-whatsapp-card" target="_blank">Reservar Turno</a>
-            </div>
-
-            <div class="servicio-card">
-                <span>✂️</span>
-                <h3>Barbería</h3>
-                <p>Cortes y perfilados modernos con un acabado impecable.</p>
-                <a href="https://wa.me/5491131511068?text=Hola%20Cari,%20quiero%20consultar%20sobre%20Barbería" class="btn-whatsapp-card" target="_blank">Reservar Turno</a>
-            </div>
-
-            <div class="servicio-card">
-                <span>👁️</span>
-                <h3>Depilación de Cejas</h3>
-                <p>Diseño de mirada limpio y acorde a la forma de tu rostro.</p>
-                <a href="https://wa.me/5491131511068?text=Hola%20Cari,%20quiero%20consultar%20sobre%20Depilación%20de%20Cejas" class="btn-whatsapp-card" target="_blank">Reservar Turno</a>
-            </div>
-
-            <div class="servicio-card">
-                <span>✨</span>
-                <h3>Tratamientos de Cejas</h3>
-                <p>Perfilado, nutrición y colocación especializada para resaltar tu expresión.</p>
-                <a href="https://wa.me/5491131511068?text=Hola%20Cari,%20quiero%20consultar%20sobre%20Tratamientos%20de%20Cejas" class="btn-whatsapp-card" target="_blank">Reservar Turno</a>
-            </div>
-
-            <!-- Uñas (Número: 5491126840333) -->
-            <div class="servicio-card">
-                <span>💅</span>
-                <h3>Estilismo de Uñas Profesionales</h3>
-                <p>Manicuría profesional, esmaltados y esculpidos de alta calidad.</p>
-                <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20Estilismo%20de%20Uñas" class="btn-whatsapp-card" target="_blank">Reservar Turno</a>
+                <span>💅✨</span>
+                <h3>Estilismo de Uñas</h3>
+                <p>Manicuría profesional, esmaltados semipermanentes, esculpidos y nail art de alta calidad.</p>
+                <a href="unas.html" class="btn-ver-mas">Ver Trabajos y Reseñas</a>
             </div>
         </div>
 
-        <!-- Capacitaciones (Número de Uñas: 5491126840333) -->
+        <!-- Capacitaciones -->
         <div class="curso-box">
-            <h3>🎓 Capacitaciones Profesionales</h3>
-            <p>Sumate a nuestro <strong>Curso de Trabajo de Estética de Uñas</strong>. Aprendé desde cero con salida laboral asegurada y técnicas profesionales.</p>
-            <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp (Uñas y Cursos)</a>
+            <h3>🎓 Capacitaciones Profesionales de Uñas</h3>
+            <p>Sumate a nuestro <strong>Curso de Trabajo de Estética de Uñas</strong>. Aprendé desde cero con salida laboral asegurada.</p>
+            <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
         </div>
     </div>
 
