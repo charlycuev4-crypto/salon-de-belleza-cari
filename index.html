@@ -6,229 +6,298 @@
     <title>Centro de Estética Profesional Cari</title>
     <style>
         :root {
-            --color-fondo: #f8f9fa;
-            --color-card: #ffffff;
+            --bg-primary: #ffffff;
+            --bg-secondary: #fbf9f6;
             --color-acento: #c59b27;
-            --color-texto-oscuro: #2d2d2d;
-            --color-texto-suave: #666666;
-            --color-borde: #e2d9c5;
+            --color-acento-dark: #a47e1d;
+            --texto-principal: #1a1a1a;
+            --texto-secundario: #666666;
+            --borde-suave: #eae3d2;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
         }
 
         body {
-            background-color: var(--color-fondo);
-            color: var(--color-texto-oscuro);
-            line-height: 1.6;
-            overflow-x: hidden;
+            background-color: var(--bg-primary);
+            color: var(--texto-principal);
+            line-height: 1.7;
         }
 
-        header {
-            background: linear-gradient(135deg, #ffffff, #f2efe9);
-            color: var(--color-texto-oscuro);
+        /* Barra superior minimalista */
+        .top-bar {
+            background-color: #1a1a1a;
+            color: #ffffff;
             text-align: center;
-            padding: 4rem 1rem;
-            border-bottom: 2px solid var(--color-acento);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-            position: relative;
+            padding: 0.5rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        header h1 {
-            font-size: 2.4rem;
+        /* Hero / Presentación Principal tipo Clínica Estética */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23fbf9f6" width="100" height="100"/></svg>');
+            background-color: var(--bg-secondary);
+            padding: 5rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--borde-suave);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--texto-principal);
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
             color: var(--color-acento);
-            margin-bottom: 0.5rem;
-            letter-spacing: 1.5px;
+            font-weight: 600;
         }
 
-        header p {
-            font-size: 1.15rem;
-            color: var(--color-texto-suave);
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--texto-secundario);
+            margin-bottom: 2rem;
             font-weight: 300;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 3rem 1rem;
+            padding: 4rem 1.5rem;
         }
 
-        .seccion-titulo {
+        .seccion-header {
             text-align: center;
-            margin-bottom: 2.5rem;
-            color: var(--color-texto-oscuro);
-            font-size: 1.9rem;
+            margin-bottom: 3rem;
+        }
+
+        .seccion-header h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            color: var(--texto-principal);
+            margin-bottom: 0.5rem;
+        }
+
+        .seccion-header p {
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+        }
+
+        .seccion-header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--color-acento);
+            margin: 1rem auto 0;
+        }
+
+        /* Grid de Categorías Estilo Premium */
+        .categorias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .categoria-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--borde-suave);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .categoria-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            border-color: var(--color-acento);
+        }
+
+        .categoria-img-placeholder {
+            width: 100%;
+            height: 220px;
+            background-color: #f2ece1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--texto-secundario);
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .categoria-body {
+            padding: 2.5rem 2rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .categoria-body h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--texto-principal);
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .categoria-body p {
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border: 1px solid var(--color-acento);
+            color: var(--texto-principal);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-acento);
+            color: #ffffff;
+        }
+
+        /* Sección de Capacitaciones / Cursos */
+        .cursos-banner {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--borde-suave);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 2rem;
+        }
+
+        .cursos-banner h3 {
+            font-size: 1.7rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
             letter-spacing: 1px;
         }
 
-        .seccion-titulo::after {
-            content: '';
-            display: block;
-            width: 120px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--color-acento), transparent);
-            margin: 0.8rem auto 0;
-        }
-
-        .servicios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3.5rem;
-        }
-
-        .servicio-card {
-            background: var(--color-card);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid var(--color-borde);
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-        }
-
-        .servicio-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--color-acento), transparent);
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-        }
-
-        .servicio-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--color-acento);
-            box-shadow: 0 8px 25px rgba(197, 155, 39, 0.12);
-        }
-
-        .servicio-card span {
-            font-size: 3rem;
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .servicio-card h3 {
-            font-size: 1.3rem;
-            color: var(--color-acento);
-            margin-bottom: 0.8rem;
-        }
-
-        .servicio-card p {
-            color: var(--color-texto-suave);
-            font-size: 0.98rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn-ver-mas {
-            display: inline-block;
-            background-color: var(--color-acento);
-            color: white;
-            padding: 0.7rem 1.8rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.95rem;
-            transition: opacity 0.3s, transform 0.2s;
-        }
-
-        .btn-ver-mas:hover {
-            opacity: 0.9;
-            transform: scale(1.03);
-        }
-
-        .curso-box {
-            background: linear-gradient(135deg, #ffffff, #fdfbf7);
-            color: var(--color-texto-oscuro);
-            padding: 3rem 2rem;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid var(--color-acento);
-            box-shadow: 0 6px 20px rgba(197, 155, 39, 0.08);
-        }
-
-        .curso-box h3 {
-            color: var(--color-acento);
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-
-        .curso-box p {
-            color: var(--color-texto-suave);
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+        .cursos-banner p {
+            color: var(--texto-secundario);
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
         }
 
         .btn-whatsapp {
             display: inline-block;
-            background: linear-gradient(135deg, #25d366, #1ebe5d);
+            background-color: #25d366;
             color: white;
-            padding: 0.9rem 2.4rem;
-            border-radius: 30px;
+            padding: 0.9rem 2.5rem;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: opacity 0.3s;
         }
 
         .btn-whatsapp:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            opacity: 0.9;
         }
 
         footer {
-            background-color: #f1efea;
-            color: var(--color-texto-suave);
+            background-color: #1a1a1a;
+            color: #999999;
             text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--color-borde);
-            margin-top: 3rem;
+            padding: 2.5rem 1rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-top: 4rem;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Centro de Estética Profesional Cari</h1>
-        <p>Belleza, estilo y vanguardia a tu medida</p>
-    </header>
+    <div class="top-bar">
+        Excelencia y Vanguardia en Estética Profesional
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Centro de Estética <span>Cari</span></h1>
+            <p>Tratamientos personalizados y diseño de imagen con altos estándares de calidad y atención exclusiva.</p>
+        </div>
+    </section>
 
     <div class="container">
-        <h2 class="seccion-titulo">Nuestras Áreas de Atención</h2>
-        
-        <div class="servicios-grid">
-            <!-- Tarjeta Estética y Barbería -> Abre estetica.html -->
-            <div class="servicio-card">
-                <span>💇‍♀️✂️</span>
-                <h3>Estética, Color & Barbería</h3>
-                <p>Colorimetría avanzada, cortes, peinados, barbería y diseño de cejas profesional.</p>
-                <a href="estetica.html" class="btn-ver-mas">Ver Trabajos y Reseñas</a>
+        <div class="seccion-header">
+            <h2>Nuestras Especialidades</h2>
+            <p>Seleccione un área para explorar nuestros servicios y galerías</p>
+        </div>
+
+        <div class="categorias-grid">
+            <!-- Tarjeta 1: Estética, Color y Barbería -->
+            <div class="categoria-card">
+                <div class="categoria-img-placeholder">
+                    [ Imagen en formato WebP ]
+                </div>
+                <div class="categoria-body">
+                    <div>
+                        <h3>Estética, Color & Barbería</h3>
+                        <p>Especialistas en colorimetría avanzada, estilismo capilar, barbería y diseño de cejas.</p>
+                    </div>
+                    <div>
+                        <a href="estetica.html" class="btn-outline">Ver Especialidad</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- Tarjeta Uñas -> Abre unas.html -->
-            <div class="servicio-card">
-                <span>💅✨</span>
-                <h3>Estilismo de Uñas</h3>
-                <p>Manicuría profesional, esmaltados semipermanentes, esculpidos y nail art de alta calidad.</p>
-                <a href="unas.html" class="btn-ver-mas">Ver Trabajos y Reseñas</a>
+            <!-- Tarjeta 2: Estilismo de Uñas -->
+            <div class="categoria-card">
+                <div class="categoria-img-placeholder">
+                    [ Imagen en formato WebP ]
+                </div>
+                <div class="categoria-body">
+                    <div>
+                        <h3>Estilismo de Uñas</h3>
+                        <p>Manicuría profesional, esculpidos de alta duración y tendencias exclusivas en nail art.</p>
+                    </div>
+                    <div>
+                        <a href="unas.html" class="btn-outline">Ver Especialidad</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Capacitaciones -->
-        <div class="curso-box">
-            <h3>🎓 Capacitaciones Profesionales de Uñas</h3>
-            <p>Sumate a nuestro <strong>Curso de Trabajo de Estética de Uñas</strong>. Aprendé desde cero con salida laboral asegurada y técnicas profesionales.</p>
-            <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp (Uñas y Cursos)</a>
+        <!-- Banner de Capacitaciones -->
+        <div class="cursos-banner">
+            <h3>Capacitaciones Profesionales</h3>
+            <p>Formate con nuestros cursos especializados de estética de uñas. Programas diseñados con salida laboral y asesoramiento personalizado.</p>
+            <a href="https://wa.me/5491126840333?text=Hola,%20quiero%20consultar%20sobre%20el%20Curso%20de%20Estética%20de%20Uñas" class="btn-whatsapp" target="_blank">Consultar por WhatsApp</a>
         </div>
     </div>
 
